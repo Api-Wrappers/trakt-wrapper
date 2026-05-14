@@ -1,8 +1,14 @@
-# @api-wrappers/trakt-wrapper
+<h1 align="center">@api-wrappers/trakt-wrapper</h1>
 
-![GitHub Repo stars](https://img.shields.io/github/stars/api-wrappers/trakt-wrapper)
+<p align="center">
+  Modern TypeScript client for the <a href="https://trakt.docs.apiary.io/">Trakt API</a>.
+</p>
 
-Modern TypeScript client for the [Trakt API](https://trakt.docs.apiary.io/).
+<p align="center">
+  <a href="https://www.npmjs.com/package/@api-wrappers/trakt-wrapper"><img alt="npm version" src="https://img.shields.io/npm/v/@api-wrappers/trakt-wrapper"></a>
+  <a href="https://github.com/Api-Wrappers/trakt-wrapper/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/npm/l/@api-wrappers/trakt-wrapper"></a>
+  <a href="https://github.com/Api-Wrappers/trakt-wrapper/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/api-wrappers/trakt-wrapper"></a>
+</p>
 
 It is designed to pair well with `@api-wrappers/tmdb-wrapper`: TMDb covers rich
 movie and TV metadata, while Trakt covers watch history, watchlists, ratings,
