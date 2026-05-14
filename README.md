@@ -1,12 +1,12 @@
 # @api-wrappers/trakt-wrapper
 
+![GitHub Repo stars](https://img.shields.io/github/stars/api-wrappers/trakt-wrapper)
+
 Modern TypeScript client for the [Trakt API](https://trakt.docs.apiary.io/).
 
 It is designed to pair well with `@api-wrappers/tmdb-wrapper`: TMDb covers rich
 movie and TV metadata, while Trakt covers watch history, watchlists, ratings,
 lists, calendars, scrobbling, and user sync.
-
-If this package saves you time, [star the repo](https://github.com/Api-Wrappers/trakt-wrapper) to help other Trakt developers find it.
 
 ## Install
 
