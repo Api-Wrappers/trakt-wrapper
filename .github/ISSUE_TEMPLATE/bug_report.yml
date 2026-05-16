@@ -1,0 +1,58 @@
+name: Bug report
+description: Report a reproducible problem in the Trakt wrapper.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please include enough detail for someone to reproduce the request path, method, body, and response.
+  - type: input
+    id: package-version
+    attributes:
+      label: Package version
+      description: Which version of @api-wrappers/trakt-wrapper are you using?
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      options:
+        - Bun
+        - Node.js
+        - Browser
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide a minimal code sample or test case.
+      render: ts
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the URL, method, status code, or error message when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Paste the result of `bun run verify` if you ran it.
+      render: shell
+    validations:
+      required: false

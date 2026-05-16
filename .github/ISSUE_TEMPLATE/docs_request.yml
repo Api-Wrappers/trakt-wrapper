@@ -1,0 +1,41 @@
+name: Documentation request
+description: Request clearer examples, guides, or reference docs.
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: dropdown
+    id: docs-area
+    attributes:
+      label: Documentation area
+      options:
+        - README
+        - Examples
+        - Contributing
+        - Roadmap
+        - Endpoint reference
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is unclear or missing?
+      description: Describe the specific flow, endpoint, or concept that needs better docs.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-change
+    attributes:
+      label: Suggested change
+      description: Optional wording, example code, or structure.
+    validations:
+      required: false
+  - type: textarea
+    id: source-check
+    attributes:
+      label: Source check
+      description: If this documents an endpoint, note the source file or method you checked.
+      placeholder: "Example: src/endpoints/sync.ts sync.watchlist"
+    validations:
+      required: false

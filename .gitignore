@@ -5,3 +5,4 @@ coverage/
 *.tgz
 .env
 .env.*
+docs/issue-drafts.md

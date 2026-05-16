@@ -1,0 +1,45 @@
+name: Feature request
+description: Suggest a typed endpoint, runtime feature, or SDK improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: What app flow or Trakt workflow would this unlock?
+      placeholder: "Example: sync a user's playback progress into a personal media dashboard."
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-api
+    attributes:
+      label: Proposed API
+      description: If you have a method shape in mind, describe it here.
+      render: ts
+    validations:
+      required: false
+  - type: textarea
+    id: trakt-endpoints
+    attributes:
+      label: Trakt endpoint details
+      description: List the Trakt path, method, query parameters, and body fields you expect this to cover.
+    validations:
+      required: true
+  - type: dropdown
+    id: breaking-change
+    attributes:
+      label: Would this require a breaking change?
+      options:
+        - "No"
+        - "Unsure"
+        - "Yes"
+    validations:
+      required: true
+  - type: textarea
+    id: extra-context
+    attributes:
+      label: Additional context
+    validations:
+      required: false

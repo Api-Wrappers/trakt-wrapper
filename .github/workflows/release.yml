@@ -1,0 +1,57 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  release:
+    name: Version Or Publish
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+
+      - name: Setup Node For npm Publish
+        uses: actions/setup-node@v6
+        with:
+          node-version: 26
+          registry-url: https://registry.npmjs.org
+
+      - name: Install Dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Verify Package
+        run: bun run verify
+
+      - name: Create Release Pull Request Or Publish To npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          version: bun run version-packages
+          publish: bun run release
+          title: Version Packages
+          commit: Version Packages
+          createGithubReleases: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: "true"
