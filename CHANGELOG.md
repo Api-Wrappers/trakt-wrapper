@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+### Patch Changes
+
+- 8107e47: Improve npm package discovery with more specific Trakt, movie/TV tracking, scrobbling, OAuth, and TypeScript search keywords.
+
 All notable changes to this package will be documented in this file.
 
 This project follows semantic versioning for published releases.

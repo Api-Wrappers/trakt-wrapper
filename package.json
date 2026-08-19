@@ -1,6 +1,6 @@
 {
 	"name": "@api-wrappers/trakt-wrapper",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Type-safe TypeScript Trakt companion SDK for watchlists, history, ratings, calendars, scrobbling, user sync, OAuth, pagination, and api-core plugins.",
 	"module": "./dist/index.mjs",
 	"type": "module",
